@@ -5,11 +5,15 @@
   
 &emsp;&emsp;本项目学习内容：
 * Spark基础概念
-* Spark不同运行模式环境搭建：local、Standalone、Standalone HA、Spark on YARN。
-* IDEA搭建Spark开发环境，实现CountWord示例demo。
+* Spark不同运行模式环境搭建：local、Standalone、Standalone HA、Spark on YARN
+* IDEA搭建Spark开发环境，实现CountWord示例demo
 
 &emsp;&emsp;本项目属于《Spark系列》：  
 * [《Spark环境搭建》](https://github.com/xiaoguangbiao-github/bigdata_spark_env.git)  
+* [《Spark内核原理及RDD》](https://github.com/xiaoguangbiao-github/bigdata_spark_core.git)  
+* [《SparkStreaming & SparkSql》](https://github.com/xiaoguangbiao-github/bigdata_sparkstreaming_sparksql.git)  
+* [《StructuredStreaming & Spark综合案例》](https://github.com/xiaoguangbiao-github/bigdata_structuredstreaming_sparkdemo.git)
+* [《Spark3.0新特性 & Spark多语言开发》](https://github.com/xiaoguangbiao-github/bigdata_spark3_languagedevelop.git)
 
 
 ## 2、开发环境
