@@ -101,11 +101,9 @@
 
 2.ScalaSDK只需要在Windows安装即可
 
-3.Spark安装包
-
-http://spark.apache.org/downloads.html
-
-直接使用资料中的spark-3.0.1-bin-hadoop2.7.tgz
+3.Spark安装包  
+http://spark.apache.org/downloads.html  
+我这里使用：spark-3.0.1-bin-hadoop2.7.tgz  
 
 ## 原理
 
@@ -123,7 +121,7 @@ chown -R root /export/server/spark-3.0.1-bin-hadoop2.7
 
 chgrp -R root /export/server/spark-3.0.1-bin-hadoop2.7
 
-3.创建软连接
+3.创建软连接（或改名）  
 
 ln -s /export/server/spark-3.0.1-bin-hadoop2.7 /export/server/spark
 
@@ -139,7 +137,7 @@ ln -s /export/server/spark-3.0.1-bin-hadoop2.7 /export/server/spark
 
 ![1609551940572](img/1609551940572.png)
 
-2.打开http://node1:4040
+2.打开http://ip:4040
 
 
 
@@ -156,7 +154,7 @@ hello
 
 
 
-4.执行WordCount
+4.spark交互式窗口中执行WordCount
 
 ```Java
 val textFile = sc.textFile("file:///root/words.txt")
@@ -176,7 +174,7 @@ counts.collect
 
 ## 操作
 
-1.集群规划
+1.环境准备
 
 node1:master
 
@@ -184,6 +182,7 @@ ndoe2:worker/slave
 
 node3:worker/slave
 
+[《先安装hadoop集群》](https://github.com/xiaoguangbiao-github/bigdata_hadoop_env/blob/main/README.md)  
 
 
 2.配置slaves/workers
