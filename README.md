@@ -163,8 +163,23 @@ counts.collect
 ```
 
 
+# Spark环境搭建-集群模式特别注意：
+阿里云ECS等公有云上搭建Hadoop集群环境——启动时报错  
+“java.net.BindException: Cannot assign requested address”问题的解决  
+“java.lang.IllegalArgumentException: java.net.UnknownHostException: iZwz91ebkz3xqtdn420j81Z”  
 
+一方面要考虑系统间的交互速度，使用内网地址；另一方面还要考虑公有云自身与外界连接，使用外网地址； 
+除此之外公有云运营商的网络规则我们是不清楚的，内网和外网之间有什么限制、规则我们不清楚。这些共同造成了这个问题的出现。 
 
+设置ip与域名的匹配时：
+1.在本机上的操作，都要设置成内网ip  
+2.其它机器上的操作，要设置成外网ip  
+
+那么具体的解决办法就是：  
+1.在Master服务器上，要将自己的ip设置成内网ip，而将另一台Slave服务器的ip设置成外网ip；  
+2.同样的在Slave服务器上，要将自己的ip设置成内网ip，而将另一台Master服务器的ip设置成外网ip。  
+
+参考：https://blog.csdn.net/gakki_smile/article/details/77198146  
 
 # Spark环境搭建-Standalone-独立集群
 
